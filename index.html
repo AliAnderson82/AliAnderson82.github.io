@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:title" content="Ali's Website">
+    <meta property="og:description" content="Welcome to my website!">
+    <meta property="og:image" content="https://classic7.lol/Assets/Icons/favicon.png">
+    <meta property="og:url" content="https://classic7.lol">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ali's Website">    
+    <title>Ali's Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Assets/Logos/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="navbar-container">
+    <div class="navbar">
+        <div class="logo">
+            <img src="Assets/Logos/logo.png" alt="name">
+        </div>
+            <div class="links">
+                <div class="link"><a data-target="page1">Home</a></div>
+                <div class="link"><a data-target="page2">Videos</a></div>
+                <div class="link"><a data-target="page3">Projects</a></div>
+                <div class="link"><a data-target="page4">About</a></div>
+                <div class="link"><a data-target="page5">Contact</a></div>
+                <div class="image-links">
+                    <a href="https://github.com/AliAnderson82/AliAnderson82.github.io" class="img-link"><img src="Assets/Icons/github.svg"></a>
+                    <a href="https://t.me/mypassapp" class="img-link"><img src="Assets/Icons/discord.svg"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-container">
+        <div id="page1" class="content active">
+            <div class="text-container">
+                <h2>Welcome to Ali's Website</h2>
+                <p>The new version.</p>
+            </div>
+            <p>Hey there! My name is Ali, and im glad you visited my website! In the nav bar you can see what you can do and i really appreciate you leaving a review in the contact section</p>
+            <p style="opacity: 0.65;"></p>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="Assets/Icons/computer.ico" alt="Computer Icon">
+                    <h3>What i code in.</h3>
+                    <p>i can code Python, HTML, CSS, C++. if you wanna leavn one of these i can maybe help you.</p>
+                </div>
+                <div class="card">
+                    <img src="Assets/Icons/desktop.ico" alt="Desktop Icon">
+                    <h3>What im interested in and what i can do.</h3>
+                    <p>im in to airplanes, computers and space propultion, i also have an ongoing project to designing a rocket engine.</p>
+                </div>
+                <div class="card">
+                    <img src="Assets/Icons/explorer.ico" alt="Explorer Icon">
+                    <h3>Some of my products.</h3>
+                    <a class="download-button" href="https://mypassapp.github.io/">MyPass</a>
+                </div>
+            </div>
+        </div>
+        <div id="page2" class="content">
+            <div class="text-container">
+                <h2>Videos</h2>
+                <p>YouTube</p>
+            </div>
+            <p>Here are some of my vids.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/URw57Lvcbyg?si=id5xiuiufS2RZT-4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/G6XfcyUFyRs?si=v2Es8zNPzlsgZuz-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <hr>
+        </div>
+            <div id="page5" class="content">
+            <div class="text-container">
+                <h2>Contact</h2>
+                <p>Useing google forms</p>
+            </div>
+            <p>here it isssssssssss:</p>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdo_A69u7AsCu77OlQ2Zkg-_Es358TfuCFNboC5-OScL2ghOQ/viewform?embedded=true" width="640" height="1082" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+        <div id="page3" class="content">
+            <div class="text-container">
+                <h2>Projects</h2>
+                <p>scratch. im sorry</p>
+            </div>
+            <h1 id="classic-7-faq">Scratch project&#39;s </h1>
+            <ul>
+                <iframe src="https://scratch.mit.edu/projects/604702629/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                <hr>
+                <iframe src="https://scratch.mit.edu/projects/604704566/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                </ul>
+              </li>
+            </ul>
+        </div>
+        <div id="page4" class="content">
+            <div class="text-container">
+                <h2>About</h2>
+                <p>know me.</p>
+            </div>
+            <p>Name: Ali.A Anderson</p>
+            <p>Age: 14</p>
+            <p>Gender: Male</p>
+            <p>Occupation: Programmer, Part-Time</p>
+        </div>
+        <div class="footer-links">
+            <p>© 2025 Ali.A Anderson</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.link a').forEach(link => {
+            link.addEventListener('click', event => {
+                event.preventDefault();
+                const targetId = link.getAttribute('data-target');
+    
+                document.querySelectorAll('.content').forEach(content => {
+                    content.classList.remove('active');
+                });
+    
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+    
+        document.querySelectorAll('.content').forEach(content => {
+            if (content.id !== 'page1') content.classList.remove('active');
+        });
+    </script>    
+</body>
+</html>
